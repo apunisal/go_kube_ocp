@@ -1,0 +1,22 @@
+jsut to keep data
+
+
+import (
+    "fmt"  
+	"context"
+	"os"             // for talking to os
+    "path/filepath" // path handeling
+	v1 "k8s.io/api/core/v1"
+    metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/client-go/kubernetes"
+    "k8s.io/client-go/tools/clientcmd"
+
+)
+
+/*
+context	// Used to control how long a request should wait before giving up (timeout).
+k8s.io/api/core/v1 //	(A) The "Blueprints". Contains the Pod struct so Go knows a Pod needs an image, a name, etc.
+metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"	// (B) The "Labels/Tags". Every K8s object needs a name and namespace; this package handles that metadata.
+k8s.io/client-go/kubernetes // 	The "Messenger". This is the actual client that sends your data to OpenShift.
+k8s.io/client-go/tools/clientcmd	// The "Keycard". This finds your ~/.kube/config file so you don't have to type passwords in your code.
+*/
